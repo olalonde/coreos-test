@@ -1,6 +1,6 @@
 destroy:
-	fleetctl destroy main@abc
-	fleetctl destroy sidekick@abc
+	-fleetctl destroy main@abc
+	-fleetctl destroy sidekick@abc
 
 submit:
 	fleetctl submit main@abc
