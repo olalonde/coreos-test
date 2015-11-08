@@ -4,7 +4,7 @@ BindsTo=sidekick@%i
 
 [Service]
 ExecStartPre=/usr/bin/echo "main@%i ExecStartPre"
-ExecStartPre=/usr/bin/echo "main@%i ExecStart"
+ExecStart=/usr/bin/echo "main@%i ExecStart"
 ExecStartPost=/usr/bin/echo "main@%i ExecStartPost"
 ExecStop=/usr/bin/echo "main@%i ExecStartPost"
 

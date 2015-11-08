@@ -4,7 +4,12 @@ Before=main@%i
 
 [Service]
 ExecStartPre=/usr/bin/echo "sidekick@%i ExecStartPre"
-ExecStartPre=/usr/bin/echo "sidekick@%i ExecStart"
+ExecStart=/bin/bash -c "\
+  echo sidekick@%i ExecStart; \
+  echo waiting 10s; \
+  sleep 10; \
+  echo 10s done; \
+"
 ExecStartPost=/usr/bin/echo "sidekick@%i ExecStartPost"
 ExecStop=/usr/bin/echo "sidekick@%i ExecStartPost"
 
