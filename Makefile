@@ -1,10 +1,11 @@
 destroy:
-	-fleetctl destroy main@abc
-	-fleetctl destroy sidekick@abc
+	-fleetctl destroy main@abc sidekick@abc
 
 submit:
-	fleetctl submit main@abc
-	fleetctl submit sidekick@abc
+	fleetctl submit main@abc sidekick@abc
+
+load:
+	fleetctl load main@abc sidekick@abc
 
 start:
 	fleetctl start main@abc
@@ -18,4 +19,4 @@ journal:
 journal-main:
 	fleetctl journal -f sidekick
 
-test: destroy submit start
+test: destroy submit load start
