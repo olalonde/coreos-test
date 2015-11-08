@@ -1,5 +1,6 @@
 [Unit]
 Description=main sidekick service
+BindsTo=main@%i.service
 Before=main@%i.service
 
 [Service]
@@ -17,4 +18,4 @@ ExecStop=/usr/bin/echo "sidekick@%i ExecStartPost"
 WantedBy=multi-user.target
 
 [X-Fleet]
-MachineOf=main@%i
+MachineOf=main@%i.service

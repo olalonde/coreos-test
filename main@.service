@@ -1,6 +1,6 @@
 [Unit]
 Description=main service
-BindsTo=sidekick@%i.service
+Wants=sidekick@%i.service
 
 [Service]
 ExecStartPre=/usr/bin/echo "main@%i ExecStartPre"

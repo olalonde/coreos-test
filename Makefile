@@ -1,22 +1,23 @@
-destroy:
+destroy: stop
 	-fleetctl destroy main@abc sidekick@abc
 
 submit:
 	fleetctl submit main@abc sidekick@abc
 
 load:
-	fleetctl load main@abc sidekick@abc
+	fleetctl load main@abc
+	fleetctl load sidekick@abc
 
 start:
 	fleetctl start main@abc
 
-journal:
-	echo "" > logs
-	fleetctl journal -f sidekick@abc > logs &
-	fleetctl journal -f main@abc > logs &
-	tail -f logs
+stop:
+	fleetctl stop main@abc
+
+journal-sidekick:
+	fleetctl journal -f sidekick@abc
 
 journal-main:
-	fleetctl journal -f sidekick
+	fleetctl journal -f main@abc
 
-test: destroy submit start
+test: destroy submit load start
