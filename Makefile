@@ -19,4 +19,4 @@ journal:
 journal-main:
 	fleetctl journal -f sidekick
 
-test: destroy submit load start
+test: destroy submit start

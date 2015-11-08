@@ -1,6 +1,6 @@
 [Unit]
 Description=main sidekick service
-Before=main@%i
+Before=main@%i.service
 
 [Service]
 ExecStartPre=/usr/bin/echo "sidekick@%i ExecStartPre"
