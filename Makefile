@@ -11,8 +11,8 @@ start:
 
 journal:
 	echo "" > logs
-	fleetctl journal -f sidekick > logs &
-	fleetctl journal -f main > logs &
+	fleetctl journal -f sidekick@abc > logs &
+	fleetctl journal -f main@abc > logs &
 	tail -f logs
 
 journal-main:
