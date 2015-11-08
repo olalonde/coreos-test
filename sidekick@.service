@@ -1,0 +1,14 @@
+[Unit]
+Description=main sidekick service
+Before=main@%i
+
+[Service]
+ExecStartPre=/usr/bin/echo "sidekick@%i ExecStartPre"
+ExecStartPre=/usr/bin/echo "sidekick@%i ExecStart"
+ExecStartPost=/usr/bin/echo "sidekick@%i ExecStartPost"
+ExecStop=/usr/bin/echo "sidekick@%i ExecStartPost"
+
+[Install]
+WantedBy=multi-user.target
+
+[X-Fleet]
