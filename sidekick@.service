@@ -5,12 +5,13 @@ Before=main@%i.service
 
 [Service]
 ExecStartPre=/usr/bin/echo "sidekick@%i ExecStartPre"
-ExecStart=/bin/bash -c "\
+ExecStartPre=/bin/bash -c "\
   echo sidekick@%i ExecStart; \
   echo waiting 10s; \
   sleep 10; \
   echo 10s done; \
 "
+ExecStart=/usr/bin/tail -f /dev/null
 ExecStartPost=/usr/bin/echo "sidekick@%i ExecStartPost"
 ExecStop=/usr/bin/echo "sidekick@%i ExecStartPost"
 
