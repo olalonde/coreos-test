@@ -5,8 +5,7 @@ submit:
 	fleetctl submit main@abc sidekick@abc
 
 load:
-	fleetctl load main@abc
-	fleetctl load sidekick@abc
+	fleetctl load main@abc sidekick@abc
 
 start:
 	fleetctl start main@abc

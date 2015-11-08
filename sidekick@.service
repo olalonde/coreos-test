@@ -13,7 +13,7 @@ ExecStartPre=/bin/bash -c "\
 "
 ExecStart=/usr/bin/tail -f /dev/null
 ExecStartPost=/usr/bin/echo "sidekick@%i ExecStartPost"
-ExecStop=/usr/bin/echo "sidekick@%i ExecStartPost"
+ExecStop=/usr/bin/echo "sidekick@%i ExecStop"
 
 [Install]
 WantedBy=multi-user.target

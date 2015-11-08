@@ -4,9 +4,9 @@ Wants=sidekick@%i.service
 
 [Service]
 ExecStartPre=/usr/bin/echo "main@%i ExecStartPre"
-ExecStart=/usr/bin/echo "main@%i ExecStart"
+ExecStart=/usr/bin/tail -f /dev/null
 ExecStartPost=/usr/bin/echo "main@%i ExecStartPost"
-ExecStop=/usr/bin/echo "main@%i ExecStartPost"
+ExecStop=/usr/bin/echo "main@%i ExecStop"
 
 [Install]
 WantedBy=multi-user.target
