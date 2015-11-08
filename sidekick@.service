@@ -17,3 +17,4 @@ ExecStop=/usr/bin/echo "sidekick@%i ExecStartPost"
 WantedBy=multi-user.target
 
 [X-Fleet]
+MachineOf=main@%i
